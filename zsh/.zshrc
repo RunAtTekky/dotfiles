@@ -106,6 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# To set encoding
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
+
 bindkey -v
 bindkey '^[[Z' autosuggest-accept
 
