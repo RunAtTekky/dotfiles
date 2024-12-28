@@ -139,6 +139,9 @@ bindkey -v
 # Accepting historical suggestion using shift + tab
 bindkey '^[[Z' autosuggest-accept
 
+# FZF
+bindkey -s '^f' 'nvim "$(fzf)"\n'
+
 eval "$(zoxide init zsh)"
 
 # Created by `pipx` on 2024-10-17 18:49:36
