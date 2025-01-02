@@ -146,3 +146,5 @@ eval "$(zoxide init zsh)"
 
 # Created by `pipx` on 2024-10-17 18:49:36
 export PATH="$PATH:/home/runat/.local/bin"
+export PATH="$PATH:/home/runat/.scripts"
+
