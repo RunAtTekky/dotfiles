@@ -13,6 +13,8 @@ map K zoom in
 map J zoom out
 map r reload
 map R rotate
+map a adjust_window width
+map t adjust_window best-fit
 
 map [fullscreen] D toggle_page_mode
 map [fullscreen] <C-f> display_link
