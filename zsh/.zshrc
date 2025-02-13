@@ -140,7 +140,8 @@ bindkey -v
 bindkey '^[[Z' autosuggest-accept
 
 # FZF
-bindkey -s '^f' 'nvim "$(fzf)"\n'
+bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
+
 
 eval "$(zoxide init zsh)"
 
