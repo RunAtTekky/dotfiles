@@ -7,6 +7,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set default editor as nvim
 export VISUAL=nvim
 export EDITOR=nvim
+
+# Greet with Cowsay Stegosaurus
+cowsay -f stegosaurus Hi $USER
+
 #
 # # Change cursor shape for different vi modes.
 # function zle-keymap-select {
