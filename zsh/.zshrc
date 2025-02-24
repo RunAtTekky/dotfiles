@@ -9,7 +9,7 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 # Greet with Cowsay Stegosaurus
-cowsay -f stegosaurus Hi $USER
+# cowsay -f stegosaurus Hi $USER
 
 #
 # # Change cursor shape for different vi modes.
@@ -145,6 +145,9 @@ bindkey '^[[Z' autosuggest-accept
 
 # FZF
 bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
+
+# Copying link
+bindkey -s '^n' 'copy_link_nom.sh\n'
 
 
 eval "$(zoxide init zsh)"
