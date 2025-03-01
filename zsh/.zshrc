@@ -128,6 +128,17 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
+# USE LF TO SWITCH DIRECTORIES AND BIND IT TO CTRL-O
+lfcd () {
+    tmp="$(mktemp)"
+    lfub -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -150,6 +161,8 @@ bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
 # Copying link
 bindkey -s '^n' 'copy_link_nom.sh\n'
 
+# Open LF and change to directory
+bindkey -s '^g' 'lfcd\n'
 
 eval "$(zoxide init zsh)"
 
