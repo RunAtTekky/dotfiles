@@ -132,6 +132,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias r="ranger"
+alias lf="lfub"
 
 # To set encoding
 export LC_ALL=en_IN.UTF-8
