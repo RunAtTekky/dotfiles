@@ -208,4 +208,4 @@ map T $nsxiv -t "$(pwd)" # opens thumbnail mode
 map <c-l> unselect
 
 # Source Bookmarks
-source "~/.config/lf/shortcutrc"
+# source "~/.config/lf/shortcutrc"
