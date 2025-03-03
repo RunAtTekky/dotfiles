@@ -3,7 +3,7 @@ configuration {
   display-window: "Windows:";
   drun-display-format: "{icon} {name}";
   font: "JetBrainsMono Nerd Font Bold 14";
-  modi: "window,run,drun";
+  modi: "window,run,drun,calc:qalc";
   show-icons: true;
   icon-theme: "Papirus";
 }
@@ -59,7 +59,7 @@ listview {
 
 mainbox {
   background-color: @bg;
-  children: [inputbar, listview];
+  children: [inputbar, message, listview];
 }
 
 prompt {
