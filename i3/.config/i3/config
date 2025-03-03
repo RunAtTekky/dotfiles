@@ -24,7 +24,10 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 
 # Set translucent background
-exec --no-startup-id compton --config ~/.config/compton.conf
+# exec --no-startup-id compton --config ~/.config/compton.conf
+
+# Picom compositor
+exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 
 # Set keyboard layout, CAPS LOCK is ESCAPE
 exec --no-startup-id csd-keyboard
