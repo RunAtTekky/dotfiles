@@ -89,6 +89,11 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # bindcode Mod1+40 exec "rofi -modi drun,run -show drun"
 bindcode Mod1+23 exec "rofi -show window"
 
+for_window [class   = "^.*"] border pixel 0
+for_window [title   = "^.*"] border pixel 0
+
+# border_radius 3
+# smart_borders on
 
 # Set inner/outer gaps
 gaps inner 15
@@ -101,8 +106,8 @@ set $mode_gaps Gaps
 bindsym $mod+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
-    bindsym Up gaps inner current plus 5
-    bindsym Down gaps inner current minus 5
+    bindsym k gaps inner current plus 5
+    bindsym j gaps inner current minus 5
     
     bindsym Escape mode "default"
     bindsym Return mode "default"
