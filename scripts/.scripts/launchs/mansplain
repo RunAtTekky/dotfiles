@@ -1,0 +1,11 @@
+#!/bin/bash
+# man -k . | dmenu -l 30 | awk {'print $1'} | xargs -r man -Tpdf | zathura -
+
+selection=$(man -k . | dmenu -l 30 | awk '{print $1}')
+# selection=$(man -k . | rofi -dmenu -i | awk '{print $1}')
+
+# Exit if no selection is made
+[ -z "$selection" ] && exit
+
+man -Tpdf "$selection" | zathura -
+

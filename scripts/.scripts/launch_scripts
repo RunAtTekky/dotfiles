@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# List all executable scripts in ~/.scripts
+# script=$(ls ~/.scripts | dmenu -i -p "Select a script to run:")
+# script=$(ls ~/.scripts | dmenu -l 30)
+# script=$(cat ~/.scripts/scripts_to_launch | dmenu -l 30)
+script=$(cat ~/.scripts/scripts_to_launch | rofi -dmenu -i)
+
+# If a script is selected, execute it
+[ -n "$script" ] && ~/.scripts/launchs/"$script"
+

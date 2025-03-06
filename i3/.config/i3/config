@@ -269,5 +269,5 @@ bindsym $mod+Shift+v exec --no-startup-id rofi -modi "clipboard:greenclip print"
 bindsym $mod+Shift+c exec --no-startup-id ~/.scripts/rofi_calc
 
 # toggle i3 bar
-bindsym $mod+Shift+n bar mode invisible
-bindsym $mod+n bar mode dock
+# bindsym $mod+Shift+n bar mode invisible
+# bindsym $mod+n bar mode dock

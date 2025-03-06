@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mpv --ytdl-format="bv*[height=$1]+ba/b[height=$1]" $2
+
