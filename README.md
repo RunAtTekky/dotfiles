@@ -1,8 +1,11 @@
 # Managing my dotfiles
 Use this repo to get back to the configuration of various programs you use on a new computer.
 
+> Click this to watch YT video
+[![YT Video](https://i.ytimg.com/vi/fVjRIJNxGK8/hqdefault.jpg)](https://youtu.be/fVjRIJNxGK8)
+
 # Programs I Use
-WM: [i3](https://github.com/i3/i3)
+WM: [i3WM](https://github.com/i3/i3)
 
 OS: [Linux Mint](https://linuxmint.com/)
 
@@ -17,6 +20,8 @@ Application Launcher: [Rofi](https://github.com/davatorium/rofi)
 PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
 
 Image Viewer: [SXIV](https://github.com/xyb3rt/sxiv)
+
+MPV: [MPV](https://mpv.io/)
 
 ## Pre-requisites
 ```
