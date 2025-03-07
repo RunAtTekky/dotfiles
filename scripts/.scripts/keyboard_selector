@@ -1,0 +1,15 @@
+#!/bin/bash
+
+selection=$(printf "dvorak\nqwerty" | rofi -dmenu -i)
+
+# If $selection is empty then exit
+[ -z "$selection" ] && exit
+
+# Switch case
+case "$selection" in
+	"dvorak")
+		setxkbmap -layout "us" -variant "dvorak";;
+	"qwerty")
+		setxkbmap -layout "us";;
+esac
+	

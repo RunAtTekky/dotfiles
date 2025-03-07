@@ -158,13 +158,13 @@ bindsym $mod+comma layout tabbed
 bindsym $mod+period layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -271,3 +271,6 @@ bindsym $mod+Shift+c exec --no-startup-id ~/.scripts/rofi_calc
 # toggle i3 bar
 # bindsym $mod+Shift+n bar mode invisible
 # bindsym $mod+n bar mode dock
+
+# Change keyboard layout
+bindcode $mod+65 exec --no-startup-id ~/.scripts/keyboard_selector
