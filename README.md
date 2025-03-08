@@ -14,6 +14,8 @@ Shell: [ZSH](https://wiki.archlinux.org/title/Zsh)
 
 Compositor: [Picom](https://github.com/ibhagwan/picom)
 
+Bar: [Polybar](https://github.com/polybar/polybar)
+
 File Manager: [LF File Manager](https://github.com/gokcehan/lf)
 
 Application Launcher: [Rofi](https://github.com/davatorium/rofi)
@@ -22,7 +24,7 @@ PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
 
 Image Viewer: [SXIV](https://github.com/xyb3rt/sxiv)
 
-MPV: [MPV](https://mpv.io/)
+Video Player: [MPV](https://mpv.io/)
 
 ## Pre-requisites
 ```
