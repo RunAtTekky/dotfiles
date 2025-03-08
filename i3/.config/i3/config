@@ -274,3 +274,7 @@ bindsym $mod+Shift+c exec --no-startup-id ~/.scripts/rofi_calc
 
 # Change keyboard layout
 bindcode $mod+65 exec --no-startup-id ~/.scripts/keyboard_selector
+
+# Bindings to change opacity
+bindcode $mod+Shift+35 exec --no-startup-id picom-trans -c +10
+bindcode $mod+48 exec --no-startup-id picom-trans -c -10
