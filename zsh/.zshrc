@@ -159,7 +159,7 @@ bindkey '^[[Z' autosuggest-accept
 bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
 
 # Copying link
-bindkey -s '^n' 'python3 copy_link.py\n'
+bindkey -s '^n' 'python3 ~/.scripts/copy_link.py\n'
 
 # Open LF and change to directory
 bindkey -s '^g' 'lfcd\n'
