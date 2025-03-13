@@ -18,21 +18,34 @@ def convert_to_list(processed_text):
     return name_link
 
 def get_userchoice(name_link):
-    for idx, [title,link] in enumerate(name_link):
-        print(idx, title)
+    title_string = ""
 
-    print('\nChoose your video index: ')
+    for [title,_] in name_link:
+        title_string += title
+        title_string += "\n"
 
-    chosen = False
-    while not chosen:
-        user_choice = int(input())
+    # Take input with ROFI
+    user_choice_title = subprocess.run(['rofi', '-dmenu'], input=title_string, text=True, capture_output=True)
+    user_choice_title = user_choice_title.stdout
 
-        if user_choice < 0 or user_choice >= len(name_link):
-            print("Not available. Try again.")
-        else:
-            chosen = True
-    
-    return user_choice
+    for idx, [title, link] in enumerate(name_link):
+        if title == user_choice_title[0:-1]:
+            return idx
+
+    return -1
+
+def copy_and_output(user_choice):
+    if user_choice == -1:
+        return
+
+    title_chosen = name_link[user_choice][0]
+    link_chosen = name_link[user_choice][1]
+
+    # Copy to clipboard
+    os.system(f'echo -n {link_chosen} | xclip -selection clipboard')
+
+    print(title_chosen)
+    print(link_chosen)
 
 # Get data
 processed_text = get_data()
@@ -43,10 +56,5 @@ name_link = convert_to_list(processed_text)
 # UI
 user_choice = get_userchoice(name_link)
 
-title_chosen = name_link[user_choice][0]
-link_chosen = name_link[user_choice][1]
-
-# Copy to clipboard
-os.system(f'echo -n {link_chosen} | xclip -selection clipboard')
-
-print(f'\nCopied URL for \n{title_chosen}')
+# Copy and output
+copy_and_output(user_choice)
