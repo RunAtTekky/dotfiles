@@ -1,6 +1,8 @@
 # Managing my dotfiles
 Use this repo to get back to the configuration of various programs you use on a new computer.
 
+Check out the [WIKI](https://github.com/RunAtTekky/dotfiles/wiki)
+
 > Click this to watch YT video
 
 [![YT Video](https://i.ytimg.com/vi/fVjRIJNxGK8/hqdefault.jpg)](https://youtu.be/fVjRIJNxGK8)
