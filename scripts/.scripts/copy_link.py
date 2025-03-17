@@ -25,7 +25,7 @@ def get_userchoice(name_link):
         title_string += "\n"
 
     # Take input with ROFI
-    user_choice_title = subprocess.run(['rofi', '-dmenu'], input=title_string, text=True, capture_output=True)
+    user_choice_title = subprocess.run(['rofi', '-dmenu', '-i'], input=title_string, text=True, capture_output=True)
     user_choice_title = user_choice_title.stdout
 
     for idx, [title, link] in enumerate(name_link):

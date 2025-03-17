@@ -7,6 +7,14 @@ Check out the [WIKI](https://github.com/RunAtTekky/dotfiles/wiki)
 
 [![YT Video](https://i.ytimg.com/vi/fVjRIJNxGK8/hqdefault.jpg)](https://youtu.be/fVjRIJNxGK8)
 
+# Screenshots
+![Typing Speed](https://i.imgur.com/6kQDOYL.png)
+
+![Footy 4 Windows](https://i.imgur.com/sTbnrdq.png)
+
+![Footy 3 Windows](https://i.imgur.com/4mIljue.png)
+
+
 # Programs I Use
 WM: [i3WM](https://github.com/i3/i3)
 
