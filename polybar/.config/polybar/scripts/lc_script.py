@@ -49,6 +49,10 @@ if response.status_code == 200:
 
     # Format and print output
     print(total_solved)
+
+    with open("lc_solved.txt", "w") as file:
+        file.write(f'{total_solved}')
+
     # output = f"""
     # The User: {username}
     # solved {total_solved} problems. The category count is:
@@ -60,5 +64,7 @@ if response.status_code == 200:
     # print(output)
 
 else:
-    print("API DOWN")
+    with open("lc_solved.txt", "r") as file:
+        content = file.read()
+        print(content)
     # print(f"Error {response.status_code}: {response.text}")

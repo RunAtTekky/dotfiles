@@ -1,5 +1,6 @@
 #!/sbin/python3
 import sys
+import json
 
 import requests
 
@@ -37,8 +38,7 @@ def fetch_count(count):
     try:
         res = requests.get(URL)
         if not res.ok:
-            print("API DOWN")
-            sys.exit()
+            return
         res_json = res.json()
 
         for x in RATINGS:
@@ -54,8 +54,7 @@ def fetch_count(count):
                 if rating and verdict:
                     count[rating] += 1
     except Exception as e:
-        print("ERROR")
-        sys.exit()
+        return
 
 
 def range_count(count, left, right):
@@ -73,7 +72,15 @@ def range_count(count, left, right):
 def main():
     "Main module"
     count = {}
-    fetch_count(count)
+
+    try:
+        fetch_count(count)
+        with open("cf_solved.json", "w") as file:
+            json.dump(count, file)
+    except:
+        with open("cf_solved.json", "r") as file:
+            count = json.load(file)
+
     solved = range_count(count, int(sys.argv[1]), int(sys.argv[2]))
     print(solved)
 
