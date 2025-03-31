@@ -139,6 +139,14 @@ lfcd () {
     fi
 }
 
+# Yank to clipboard
+function vi-yank-xclip {
+  zle vi-yank
+  echo "$CUTBUFFER" | xclip -selection clipboard
+}
+zle -N vi-yank-xclip
+bindkey -M vicmd 'y' vi-yank-xclip
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
