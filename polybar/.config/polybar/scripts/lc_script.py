@@ -1,4 +1,9 @@
 import requests
+import os
+
+# Get the directory of the script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+output_file = os.path.join(script_dir, "lc_solved.txt")
 
 # Define the endpoint and headers
 url = "https://leetcode.com/graphql"
@@ -37,34 +42,20 @@ data = {
 
 # Make the POST request
 response = requests.post(url, json=data, headers=headers)
-
 if response.status_code == 200:
     response_data = response.json()
-
     # Extract necessary details
     total_solved = next(item['count'] for item in response_data['data']['matchedUser']['submitStatsGlobal']['acSubmissionNum'] if item['difficulty'] == 'All')
-    # easy_solved = next(item['count'] for item in response_data['data']['matchedUser']['submitStatsGlobal']['acSubmissionNum'] if item['difficulty'] == 'Easy')
-    # medium_solved = next(item['count'] for item in response_data['data']['matchedUser']['submitStatsGlobal']['acSubmissionNum'] if item['difficulty'] == 'Medium')
-    # hard_solved = next(item['count'] for item in response_data['data']['matchedUser']['submitStatsGlobal']['acSubmissionNum'] if item['difficulty'] == 'Hard')
-
-    # Format and print output
+    
+    # Print and save to file in the script's directory
     print(total_solved)
-
-    with open("lc_solved.txt", "w") as file:
+    with open(output_file, "w") as file:
         file.write(f'{total_solved}')
-
-    # output = f"""
-    # The User: {username}
-    # solved {total_solved} problems. The category count is:
-    # Easy: {easy_solved}
-    # Medium: {medium_solved}
-    # Hard: {hard_solved}
-    # """
-    #
-    # print(output)
-
 else:
-    with open("lc_solved.txt", "r") as file:
-        content = file.read()
-        print(content)
-    # print(f"Error {response.status_code}: {response.text}")
+    # Read from the file in the script's directory
+    try:
+        with open(output_file, "r") as file:
+            content = file.read()
+            print(content)
+    except FileNotFoundError:
+        print("Error: Could not fetch data and backup file not found")
