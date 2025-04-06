@@ -5,7 +5,7 @@ Check out the [WIKI](https://github.com/RunAtTekky/dotfiles/wiki)
 
 > Click this to watch YT video
 
-[![YT Video](https://i.ytimg.com/vi/fVjRIJNxGK8/hqdefault.jpg)](https://youtu.be/fVjRIJNxGK8)
+[YT Video](https://youtu.be/fVjRIJNxGK8)
 
 # Screenshots
 ![Typing Speed](https://i.imgur.com/6kQDOYL.png)
@@ -35,6 +35,10 @@ PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
 Image Viewer: [SXIV](https://github.com/xyb3rt/sxiv)
 
 Video Player: [MPV](https://mpv.io/)
+
+Browser: [Zen](https://zen-browser.app/)
+
+Editor: [VSCode](https://github.com/microsoft/vscode) | [NVIM](https://github.com/neovim/neovim)
 
 ## Pre-requisites
 ```
