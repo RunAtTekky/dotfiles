@@ -1,0 +1,14 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "4b027c7"
+hash = "7918aab6a71caf31b58411f789195677"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:dracula"
+rev = "68326b4"
+hash = "53e1f10ae0f6abd406e463fceca8622a"
+
+[[flavor.deps]]
+use = "dangooddd/kanagawa"
+rev = "31167ed"
+hash = "a04e157148549bacbb2831aab0e6e8cb"

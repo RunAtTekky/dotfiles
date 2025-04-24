@@ -139,6 +139,15 @@ lfcd () {
     fi
 }
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # Yank to clipboard
 function vi-yank-xclip {
   zle vi-yank
@@ -171,6 +180,9 @@ bindkey -s '^n' 'python3 ~/.scripts/copy_link.py\n'
 
 # Open LF and change to directory
 bindkey -s '^g' 'lfcd\n'
+
+# Open Yazi and change to directory
+bindkey -s '\eg' 'y\n'
 
 eval "$(zoxide init zsh)"
 
