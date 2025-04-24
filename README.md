@@ -26,7 +26,8 @@ Compositor: [Picom](https://github.com/ibhagwan/picom)
 
 Bar: [Polybar](https://github.com/polybar/polybar)
 
-File Manager: [LF File Manager](https://github.com/gokcehan/lf)
+File Manager: [LF File Manager](https://github.com/gokcehan/lf) | 
+[YAZI](https://github.com/sxyazi/yazi)
 
 Application Launcher: [Rofi](https://github.com/davatorium/rofi)
 
