@@ -44,6 +44,9 @@ open = [
 zathura = [
 	{ run = 'zathura "$1"', desc = "Open in Zathura", for = "unix" },
 ]
+sxiv = [
+	{ run = 'sxiv "$1"', desc = "Open in Sxiv", for = "unix" },
+]
 reveal = [
 	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
 	{ run = 'open -R "$1"',                         desc = "Reveal", for = "macos" },
@@ -68,7 +71,7 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = [ "open", "reveal" ] },
+	{ mime = "image/*", use = [ "sxiv", "reveal" ] },
 	# PDFs
 	{ mime = "application/pdf", use = [ "zathura", "reveal" ] },
 	# Media
