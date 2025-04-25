@@ -8,6 +8,11 @@ use = "dedukun/relative-motions"
 rev = "ce2e890"
 hash = "23915860e59348bf4166778bb0e606f7"
 
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "2da96e3"
+hash = "f9ee1436e3b853508d87f7d49dce56e6"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:dracula"
 rev = "68326b4"
