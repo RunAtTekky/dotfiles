@@ -161,6 +161,7 @@ bindkey -M vicmd 'y' vi-yank-xclip
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias r="ranger"
 alias lf="lfub"
+alias neofetch='neofetch --source /home/runat/.config/neofetch/skull.txt'
 
 # To set encoding
 export LC_ALL=en_IN.UTF-8
