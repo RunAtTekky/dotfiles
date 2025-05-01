@@ -91,11 +91,11 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # bindcode Mod1+40 exec "rofi -modi drun,run -show drun"
 bindcode Mod1+23 exec "rofi -show window"
 
-for_window [class   = "^.*"] border pixel 0
-for_window [title   = "^.*"] border pixel 0
+for_window [class   = "^.*"] border pixel 2
+for_window [title   = "^.*"] border pixel 2
 
 # border_radius 3
-# smart_borders on
+smart_borders on
 
 # Set inner/outer gaps
 gaps inner 15
@@ -114,6 +114,13 @@ mode "$mode_gaps" {
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
+
+# Set border colors: focused, unfocused, urgent, placeholder
+client.focused          #005577 #005577 #ffffff #2e9ef4 #005577
+client.unfocused        #222222 #222222 #888888 #292d2e #222222
+client.focused_inactive #444444 #444444 #888888 #292d2e #444444
+client.urgent           #900000 #900000 #ffffff #900000 #900000
+
 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
