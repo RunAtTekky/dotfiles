@@ -11,28 +11,6 @@ export EDITOR=nvim
 # Greet with Cowsay Stegosaurus
 # cowsay -f stegosaurus Hi $USER
 
-#
-# # Change cursor shape for different vi modes.
-# function zle-keymap-select {
-#   if [[ ${KEYMAP} == vicmd ]] ||
-#      [[ $1 = 'block' ]]; then
-#     echo -ne '\e[1 q'
-#   elif [[ ${KEYMAP} == main ]] ||
-#        [[ ${KEYMAP} == viins ]] ||
-#        [[ ${KEYMAP} = '' ]] ||
-#        [[ $1 = 'beam' ]]; then
-#     echo -ne '\e[5 q'
-#   fi
-# }
-# zle -N zle-keymap-select
-# zle-line-init() {
-#     zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-#     echo -ne "\e[5 q"
-# }
-# zle -N zle-line-init
-# echo -ne '\e[5 q' # Use beam shape cursor on startup.
-# preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-#
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -129,15 +107,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # USE LF TO SWITCH DIRECTORIES AND BIND IT TO CTRL-O
-lfcd () {
-    tmp="$(mktemp)"
-    lfub -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -159,7 +128,6 @@ bindkey -M vicmd 'y' vi-yank-xclip
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias r="ranger"
 alias lf="lfub"
 alias neofetch='neofetch --source /home/runat/.config/neofetch/skull.txt'
 
@@ -178,9 +146,6 @@ bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
 
 # Copying link
 bindkey -s '^n' 'python3 ~/.scripts/copy_link.py\n'
-
-# Open LF and change to directory
-bindkey -s '^g' 'lfcd\n'
 
 # Open Yazi and change to directory
 bindkey -s '\eg' 'y\n'
