@@ -10,6 +10,7 @@ export EDITOR=nvim
 
 # Greet with Cowsay Stegosaurus
 # cowsay -f stegosaurus Hi $USER
+figlet -f slant -t -c RunAt
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -149,6 +150,8 @@ bindkey -s '^n' 'python3 ~/.scripts/copy_link.py\n'
 
 # Open Yazi and change to directory
 bindkey -s '\eg' 'y\n'
+
+bindkey -s '\et' '/home/runat/MySpace/coding/example/stopwatch.sh\n'
 
 eval "$(zoxide init zsh)"
 
