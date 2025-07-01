@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mpv  --profile=low-latency --untimed --vf=hflip /dev/video0
+
