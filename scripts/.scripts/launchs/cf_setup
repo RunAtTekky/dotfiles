@@ -1,0 +1,75 @@
+#!/bin/bash
+
+# Configuration
+SESSION_NAME="COMPETITIVE"
+PATH_DIR="/home/runat/MySpace/coding/DSA/"  # Use first argument as path, fallback to current directory
+BROWSER_LINKS=(
+    "https://codeforces.com"
+    "https://tle-eliminators.com/cp-sheet"
+)
+
+# Function to open browser links
+open_browser_links() {
+    for link in "${BROWSER_LINKS[@]}"; do
+        # Use Zen browser on Linux
+        if command -v zen &> /dev/null; then
+            zen "$link" &
+        elif command -v zen-browser &> /dev/null; then
+            zen-browser "$link" &
+        else
+            echo "Error: Zen browser not found. Please install it or check if it's in PATH"
+            echo "Manually open: $link"
+        fi
+    done
+}
+
+# Check if tmux is installed
+if ! command -v tmux &> /dev/null; then
+    echo "Error: tmux is not installed"
+    exit 1
+fi
+
+# Check if Zen browser is available
+if ! command -v zen &> /dev/null && ! command -v zen-browser &> /dev/null; then
+    echo "Warning: Zen browser not found in PATH"
+    echo "Browser links will need to be opened manually"
+fi
+
+# Check if the directory exists
+if [ ! -d "$PATH_DIR" ]; then
+    echo "Error: Directory $PATH_DIR does not exist"
+    exit 1
+fi
+
+echo "Setting up competitive programming environment..."
+echo "Session: $SESSION_NAME"
+echo "Path: $PATH_DIR"
+
+# Create or attach to tmux session
+if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+    echo "Attaching to existing session: $SESSION_NAME"
+    tmux attach-session -t "$SESSION_NAME"
+else
+    echo "Creating new session: $SESSION_NAME"
+    
+    # Create new session with first window
+    tmux new-session -d -s "$SESSION_NAME" -c "$PATH_DIR"
+    
+    # Rename first window and open nvim
+    tmux rename-window -t "$SESSION_NAME:0" "editor"
+    tmux send-keys -t "$SESSION_NAME:0" "nvim ." Enter
+    
+    # Open browser links
+    echo "Opening browser links..."
+    open_browser_links
+    
+    # Create second window for lazygit
+    tmux new-window -t "$SESSION_NAME" -c "$PATH_DIR" -n "git"
+    tmux send-keys -t "$SESSION_NAME:git" "lazygit" Enter
+    
+    # Switch back to editor window
+    tmux select-window -t "$SESSION_NAME:editor"
+    
+    # Attach to the session
+    tmux attach-session -t "$SESSION_NAME"
+fi
