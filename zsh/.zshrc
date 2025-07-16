@@ -145,13 +145,12 @@ bindkey '^[[Z' autosuggest-accept
 # FZF
 bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
 
-# Copying link
-bindkey -s '^n' 'python3 ~/.scripts/copy_link.py\n'
-
 # Open Yazi and change to directory
 bindkey -s '\eg' 'y\n'
 
 bindkey -s '\et' '/home/runat/MySpace/coding/example/stopwatch.sh\n'
+
+bindkey -s '\es' '/home/runat/dotfiles/scripts/.scripts/launchs/cf_setup\n'
 
 eval "$(zoxide init zsh)"
 
