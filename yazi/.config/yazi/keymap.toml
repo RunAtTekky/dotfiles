@@ -192,6 +192,7 @@ keymap = [
 	{ on = [ "g", "d" ],       run = "cd ~/Downloads",   desc = "Go ~/Downloads" },
 	{ on = [ "g", "p" ],       run = "cd ~/Pictures/",   desc = "Go ~/Pictures/" },
 	{ on = [ "g", "v" ],       run = "cd ~/Videos/",     desc = "Go ~/Videos/" },
+	{ on = [ "g", "y" ],       run = "cd ~/Videos/YT_videos/",     desc = "Go ~/Videos/YT_videos/" },
 	{ on = [ "g", "<Space>" ], run = "cd --interactive", desc = "Jump interactively" },
 	{ on = [ "g", "f" ],       run = "follow",           desc = "Follow hovered symlink" },
 

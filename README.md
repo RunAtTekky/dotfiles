@@ -3,12 +3,10 @@ Use this repo to get back to the configuration of various programs you use on a 
 
 Check out the [WIKI](https://github.com/RunAtTekky/dotfiles/wiki)
 
-> Click this to watch YT video
-
-[YT Video](https://youtu.be/fVjRIJNxGK8)
-
 # Screenshots
-![Typing Speed](https://i.imgur.com/6kQDOYL.png)
+![LinuxSetup](https://i.postimg.cc/BvVDmsdr/Linux-Setup.png)
+
+![Typing Speed](https://i.postimg.cc/3R3Rjqws/typing-speed-147-WPM.png)
 
 ![Footy 4 Windows](https://i.imgur.com/sTbnrdq.png)
 

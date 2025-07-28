@@ -25,10 +25,10 @@ do
 		convert -rotate -90 "$file" "$file" ;;
 	"y") 
 		echo -n "$file" | xclip -selection clipboard &&
-		notify-send "$file copied to clpboard" & ;;
+		notify-send "$file copied to clipboard" & ;;
 	"Y")	
 		echo -n "$fullpath" | xclip -selection clipboard &&
-		notify-send "$fullpath copied to clpboard" & ;;
+		notify-send "$fullpath copied to clipboard" & ;;
 	"d")
 		[ "$(printf "No\\nYes" | dmenu -i -p "Really delete $file?")" = "Yes" ] && rm "$file" && notify-send -i "$fullpath" "$file deleted." & ;;
 	esac
