@@ -6,11 +6,11 @@ Check out the [WIKI](https://github.com/RunAtTekky/dotfiles/wiki)
 # Screenshots
 ![LinuxSetup](https://i.postimg.cc/BvVDmsdr/Linux-Setup.png)
 
-![Typing Speed](https://i.postimg.cc/3R3Rjqws/typing-speed-147-WPM.png)
-
-![Footy 4 Windows](https://i.imgur.com/sTbnrdq.png)
-
-![Footy 3 Windows](https://i.imgur.com/4mIljue.png)
+<!-- ![Typing Speed](https://i.postimg.cc/3R3Rjqws/typing-speed-147-WPM.png) -->
+<!---->
+<!-- ![Footy 4 Windows](https://i.imgur.com/sTbnrdq.png) -->
+<!---->
+<!-- ![Footy 3 Windows](https://i.imgur.com/4mIljue.png) -->
 
 
 # Programs I Use
