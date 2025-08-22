@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
-[mgr]
+[manager]
 ratio          = [ 1, 4, 3 ]
 sort_by        = "alphabetical"
 sort_sensitive = false
@@ -44,8 +44,8 @@ open = [
 zathura = [
 	{ run = 'zathura "$1"', desc = "Open in Zathura", for = "unix" },
 ]
-swayimg = [
-	{ run = 'swayimg "$1"', desc = "Open in swayimg", for = "unix" },
+sxiv = [
+	{ run = 'sxiv "$1"', desc = "Open in Sxiv", for = "unix" },
 ]
 reveal = [
 	{ run = 'xdg-open "$(dirname "$1")"',           desc = "Reveal", for = "linux" },
@@ -71,7 +71,7 @@ rules = [
 	# Text
 	{ mime = "text/*", use = [ "edit", "reveal" ] },
 	# Image
-	{ mime = "image/*", use = [ "swayimg", "reveal" ] },
+	{ mime = "image/*", use = [ "sxiv", "reveal" ] },
 	# PDFs
 	{ mime = "application/pdf", use = [ "zathura", "reveal" ] },
 	# Media

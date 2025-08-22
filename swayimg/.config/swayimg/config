@@ -1,0 +1,11 @@
+[general]
+mode = viewer
+size = 1280, 720
+overlay = yes
+decoration = no
+
+[viewer]
+window = auto
+
+[info]
+show = no
