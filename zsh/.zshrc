@@ -121,16 +121,15 @@ function y() {
 # Yank to clipboard
 function vi-yank-xclip {
   zle vi-yank
-  echo "$CUTBUFFER" | xclip -selection clipboard
+  echo "$CUTBUFFER" | wl-copy
 }
 zle -N vi-yank-xclip
 bindkey -M vicmd 'y' vi-yank-xclip
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lf="lfub"
-alias neofetch='neofetch --source /home/runat/.config/neofetch/skull.txt'
+alias v="nvim"
+alias zs="zellij --layout ~/.config/zellij/my-dev-setup.kdl"
+alias zc="zellij --layout compact"
 
 # To set encoding
 export LC_ALL=en_IN.UTF-8
@@ -148,10 +147,6 @@ bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
 # Open Yazi and change to directory
 bindkey -s '\eg' 'y\n'
 
-bindkey -s '\et' '/home/runat/MySpace/coding/example/stopwatch.sh\n'
-
-bindkey -s '\es' '/home/runat/dotfiles/scripts/.scripts/launchs/cf_setup\n'
-
 eval "$(zoxide init zsh)"
 
 # Created by `pipx` on 2024-10-17 18:49:36
@@ -159,3 +154,7 @@ export PATH="$PATH:/home/runat/.local/bin"
 export PATH="$PATH:/home/runat/.scripts"
 export PATH="$PATH:/home/runat/go/bin"
 
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"

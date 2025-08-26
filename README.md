@@ -1,51 +1,55 @@
 # Managing my dotfiles
-Use this repo to get back to the configuration of various programs you use on a new computer.
+My repo for my Arch linux setup.
+I had my own setup on Linux Mint which you can check out [here](https://github.com/RunAtTekky/dotfiles/tree/mint) 
+
+Now I'm using [Omarchy](http://omarchy.org/) for ricing and I'm focusing on actual productivity rather than mindless ricing.
 
 Check out the [WIKI](https://github.com/RunAtTekky/dotfiles/wiki)
 
 # Screenshots
-![LinuxSetup](https://i.postimg.cc/BvVDmsdr/Linux-Setup.png)
+Fastfetch output
+![LinuxSetup](https://i.postimg.cc/MWV9p0Bq/fastfetch.png)
 
-<!-- ![Typing Speed](https://i.postimg.cc/3R3Rjqws/typing-speed-147-WPM.png) -->
-<!---->
-<!-- ![Footy 4 Windows](https://i.imgur.com/sTbnrdq.png) -->
-<!---->
-<!-- ![Footy 3 Windows](https://i.imgur.com/4mIljue.png) -->
+Yazi
+![Yazi](https://i.postimg.cc/ZTWvgT6C/screenshot-2025-08-26-00-59-56.png)
+
+NVIM
+![NVIM](https://i.postimg.cc/T26ypgFD/screenshot-2025-08-26-01-00-07.png)
+
+Lazygit
+![Lazygit](https://i.postimg.cc/w9G7DSnH/screenshot-2025-08-26-01-00-20.png)
 
 
 # Programs I Use
-WM: [i3WM](https://github.com/i3/i3)
+Setup Script: [Omarchy](http://omarchy.org/)
 
-OS: [Linux Mint](https://linuxmint.com/)
+WM/Compositor: [Hyprland](https://hypr.land/)
+
+OS: [Arch Linux](https://archlinux.org/)
 
 Shell: [ZSH](https://wiki.archlinux.org/title/Zsh)
 
-Compositor: [Picom](https://github.com/ibhagwan/picom)
+Bar: [Waybar](https://github.com/Alexays/Waybar)
 
-Bar: [Polybar](https://github.com/polybar/polybar)
+File Manager: [YAZI](https://github.com/sxyazi/yazi)
 
-File Manager: [LF File Manager](https://github.com/gokcehan/lf) | 
-[YAZI](https://github.com/sxyazi/yazi)
-
-Application Launcher: [Rofi](https://github.com/davatorium/rofi)
+Application Launcher: [Walker](https://github.com/abenz1267/walker)
 
 PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
 
-Image Viewer: [SXIV](https://github.com/xyb3rt/sxiv)
+Image Viewer: [Swayimg](https://github.com/artemsen/swayimg)
 
 Video Player: [MPV](https://mpv.io/)
 
-Browser: [Zen](https://zen-browser.app/)
+Browser: [Zen](https://zen-browser.app/) | [Brave](https://brave.com/) | [Chromium](https://www.chromium.org/chromium-projects/)
 
-Editor: [VSCode](https://github.com/microsoft/vscode) | [NVIM](https://github.com/neovim/neovim)
+Editor: [NVIM](https://github.com/neovim/neovim)
 
 ## Pre-requisites
 ```
 git
 stow
 ```
-<!-- - `git` -->
-<!-- - `stow` -->
 
 ## Getting the dotfiles
 Clone this repo to your home directory
