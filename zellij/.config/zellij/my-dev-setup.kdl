@@ -1,0 +1,27 @@
+layout {
+    default_tab_template {
+        children
+        pane size=1 {
+            plugin location="zellij:compact-bar"
+            borderless true
+        }
+    }
+
+    tab name="Yazi" {
+        pane command="yazi" close_on_exit=true {
+            borderless true 
+        }
+    }
+
+    tab name="nvim" {
+        pane borderless=true {
+            command "nvim"
+            args "."
+        }
+    }
+
+    tab name="lazygit" {
+        pane borderless=true command="lazygit" close_on_exit=true
+    }
+}
+
