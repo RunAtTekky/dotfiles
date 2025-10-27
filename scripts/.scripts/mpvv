@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# mpv --ytdl-format="bv*[height=$1]+ba/b[height=$1]" --ytdl-raw-options=sub-lang="en.*",write-auto-subs=,embed-subs=,embed-chapters=, $2
-
-mpv --ytdl-format="bv[height<=$1]+ba/b" --ytdl-raw-options=sub-lang="en.*",write-auto-subs=,embed-subs=,embed-chapters=, $2

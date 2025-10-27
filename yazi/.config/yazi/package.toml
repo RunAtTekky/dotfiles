@@ -1,6 +1,6 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "9a52857"
+rev = "8f1d971"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
@@ -15,23 +15,23 @@ hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "9a52857"
-hash = "a20327710c3a8d37ee0972128dcb6a31"
+rev = "8f1d971"
+hash = "64713dcd74daf9ec644883a5895e5d1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "9a52857"
+rev = "8f1d971"
 hash = "63b6c222bf2103b3023389dde5e2ecfe"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:no-status"
-rev = "9a52857"
+rev = "8f1d971"
 hash = "3e023d31f29201efdac2a6ae35fedb78"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:dracula"
-rev = "2d73b79"
-hash = "fc6944561718351d70cffde75839211f"
+rev = "f6b425a"
+hash = "c5e49b9e877ca29a3622ec2e35af0b2a"
 
 [[flavor.deps]]
 use = "dangooddd/kanagawa"

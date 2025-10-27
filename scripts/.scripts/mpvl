@@ -1,4 +1,0 @@
-#!/bin/bash
-
-mpv --ytdl-format="bestvideo[height<=$1][vcodec^=avc1]+bestaudio" $2
-

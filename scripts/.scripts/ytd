@@ -1,3 +1,0 @@
-#!/bin/bash
-
-yt-dlp -S res:$1 --sub-langs "en.*" --write-auto-subs --embed-subs --embed-chapters $2
