@@ -9,3 +9,6 @@ window = auto
 
 [info]
 show = no
+
+[keys.viewer]
+Ctrl+Alt+w = exec "$HOME/bin/chbg" "%"

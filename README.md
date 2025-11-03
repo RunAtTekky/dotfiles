@@ -1,10 +1,9 @@
 # Managing my dotfiles
-My repo for my Arch linux setup.
-I had my own setup on Linux Mint which you can check out [here](https://github.com/RunAtTekky/dotfiles/tree/mint) 
+Started with Linux Mint, check it [here](https://github.com/RunAtTekky/dotfiles/tree/mint)
 
-Now I'm using [Omarchy](http://omarchy.org/) for ricing and I'm focusing on actual productivity rather than mindless ricing.
+This branch is for my Arch linux setup.
 
-Check out the [WIKI](https://github.com/RunAtTekky/dotfiles/wiki)
+Now I'm using [Omarchy](http://omarchy.org/) so I can focus on actual productivity rather than mindless ricing.
 
 # Screenshots
 Fastfetch output
@@ -45,64 +44,54 @@ Browser: [Zen](https://zen-browser.app/) | [Brave](https://brave.com/) | [Chromi
 
 Editor: [NVIM](https://github.com/neovim/neovim)
 
-## Pre-requisites
-```
-git
-stow
-```
-
-## Getting the dotfiles
-Clone this repo to your home directory
-> Home directory is `~` just use `cd ~` or `cd` to go to home directory
+# HOW to use
+> [!NOTE]
+> I use a [script](https://github.com/RunAtTekky/initial-setup-script) to copy config files of desired programs
 
 ```bash
-git clone git@github.com:RunAtTekky/dotfiles.git
+git clone https://github.com/RunAtTekky/dotfiles.git "$HOME/dotfiles"
 ```
 
 
 This will create a directory `~/dotfiles/`
 
 ```bash
-cd dotfiles/
+cd "$HOME/dotfiles/"
+# Install program if not installed
+# Remove the config files for the program
+rm -rf "$HOME/.config/kitty" 
+# Use the config files from out dotfiles
+stow kitty
 ```
 
-Now we use stow to get whatever config we want
+This will set the configuration for your Kitty Terminal Emulator
 
-> Keep in mind that you need to install the program first and then use the following command
+## Structure
 
-```bash
-stow nvim
+If you want to store the dotfiles for `kitty` you need to have the same structure.
+
+The config files for `kitty` are in `~/.config/kitty/kitty.conf`
+So you will create a folder inside `dotfiles` and structure it exactly like the actual path
+
 ```
+├── kitty
+│   └── .config
+│       └── kitty
+│           └── kitty.conf
 
-This will set the config for your NeoVim
-
-# Creating new dotfiles
-
-> Install the program and create your config as you would normally
-
-> Create a folder structure inside dotfiles folder same as the actual dotfile
-
-> Let's say we have Picom config in `~/.config/picom/` directory
-
-> We want to create similar structure in dotfiles
-
-> Create the following directories `~/dotfiles/picom/.config/picom/` and copy the contents of actual config here
-
-## Copying config files
-This command will copy actual config files to our `dotfiles` 
-
-```bash
-cp -r ~/.config/picom/ ~/dotfiles/picom/.config/picom/
 ```
 
 ## Creating symlink
-Use this command to create symlink between actual config files and the config files we have in `dotfiles`
+Now you have copied your desired configuration to `$HOME/dotfiles/kitty/`
+
+Now we will create symlink
 
 ```bash
-stow --adopt picom
+# Remove the actual config files
+rm -rf "$HOME/.config/kitty"
+# Symlink files in ~/dotfiles/kitty
+stow kitty
 ```
 
-> Now actual config and files in our dotfiles are linked
-
-> If you change one other will also change
+> The changes you make in dotfiles will appear in the actual config location
 
