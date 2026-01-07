@@ -118,5 +118,7 @@ bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
 # zoxide
 eval "$(zoxide init zsh)"
 
+export PATH="$PATH:$HOME/go/bin"
+
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
