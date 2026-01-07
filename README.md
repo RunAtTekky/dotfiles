@@ -18,3 +18,6 @@ Browser: [Brave](https://brave.com/)
 
 Editor: [NVIM](https://github.com/neovim/neovim)
 
+> [!NOTE]
+> The config for neovim is [here](https://github.com/RunAtTekky/kickstart-modular.nvim/tree/macos)
+
