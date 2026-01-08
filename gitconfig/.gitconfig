@@ -1,0 +1,11 @@
+[init]
+	defaultBranch = main
+[user]
+	email = varunrawat343@gmail.com
+	name = RunAtTekky
+[alias]
+	s = status
+	c = commit
+	co = checkout
+	br = branch
+	l = log --oneline
