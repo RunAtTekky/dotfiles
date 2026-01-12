@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-figlet -f slant -w $(tput cols) -c "RunAt"
+figlet -f slant -c "RunAt"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -118,7 +118,13 @@ bindkey -s '^f' 'file=$(fzf) && [ -n "$file" ] && nvim "$file"\n'
 # zoxide
 eval "$(zoxide init zsh)"
 
-export PATH="$PATH:$HOME/go/bin"
 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
