@@ -92,6 +92,13 @@ fi
 # vi mode
 bindkey -v
 
+# Yank to clipboard
+function vi-yank-xclip {
+  zle vi-yank
+  echo "$CUTBUFFER" | pbcopy
+}
+zle -N vi-yank-xclip
+bindkey -M vicmd 'y' vi-yank-xclip
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
