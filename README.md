@@ -6,19 +6,15 @@ Earlier I used [Linux Mint](https://github.com/RunAtTekky/dotfiles/tree/mint)
 [Here](https://github.com/RunAtTekky/dotfiles/tree/macos) on my MacOS setup I want similar keyboard driven workflow.
 
 # Programs I Use and which are currently managed in this branch
-Shell: [ZSH](https://wiki.archlinux.org/title/Zsh)
-
-Terminal Emulator: [Kitty](https://github.com/kovidgoyal/kitty)
-
-Terminal Multiplexer: [Zellij](https://zellij.dev/)
-
-Window Manager: [AeroSpace](https://github.com/nikitabobko/AeroSpace)
-
-Video Player: [MPV](https://mpv.io/)
-
-Browser: [Brave](https://brave.com/)
-
-Editor: [NVIM](https://github.com/neovim/neovim)
+|Tool|Program Name|
+|---|---|
+|Shell | [ZSH](https://wiki.archlinux.org/title/Zsh)|
+|Terminal Emulator | [Kitty](https://github.com/kovidgoyal/kitty)|
+|Terminal Multiplexer | [Zellij](https://zellij.dev/)|
+|Window Manager | [AeroSpace](https://github.com/nikitabobko/AeroSpace)|
+|Video Player | [MPV](https://mpv.io/)|
+|Browser | [Brave](https://brave.com/)|
+|Editor | [NVIM](https://github.com/neovim/neovim)|
 
 > [!NOTE]
 > The config for neovim is [here](https://github.com/RunAtTekky/kickstart-modular.nvim/tree/macos)
