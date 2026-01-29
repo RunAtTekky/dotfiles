@@ -16,29 +16,20 @@ Now I'm using [Omarchy](http://omarchy.org/) so I can focus on actual productivi
 Inspiration for this table from [here](https://github.com/divy-03/dotfiles?tab=readme-ov-file#%EF%B8%8F-screenshots)
 
 # Programs I Use
-Setup Script: [Omarchy](http://omarchy.org/)
-
-WM/Compositor: [Hyprland](https://hypr.land/)
-
-OS: [Arch Linux](https://archlinux.org/)
-
-Shell: [ZSH](https://wiki.archlinux.org/title/Zsh)
-
-Bar: [Waybar](https://github.com/Alexays/Waybar)
-
-File Manager: [YAZI](https://github.com/sxyazi/yazi)
-
-Application Launcher: [Walker](https://github.com/abenz1267/walker)
-
-PDF Viewer: [Zathura](https://pwmt.org/projects/zathura/)
-
-Image Viewer: [Swayimg](https://github.com/artemsen/swayimg)
-
-Video Player: [MPV](https://mpv.io/)
-
-Browser: [Zen](https://zen-browser.app/) | [Brave](https://brave.com/) | [Chromium](https://www.chromium.org/chromium-projects/)
-
-Editor: [NVIM](https://github.com/neovim/neovim)
+|Tool|Program|
+|---|---|
+| Setup Script: | [Omarchy](http://omarchy.org/) |
+| WM/Compositor: | [Hyprland](https://hypr.land/) |
+| OS: | [Arch Linux](https://archlinux.org/) |
+| Shell: | [ZSH](https://wiki.archlinux.org/title/Zsh) |
+| Bar: | [Waybar](https://github.com/Alexays/Waybar) |
+| File Manager: | [YAZI](https://github.com/sxyazi/yazi) |
+| Application Launcher: | [Walker](https://github.com/abenz1267/walker) |
+| PDF Viewer: | [Zathura](https://pwmt.org/projects/zathura/) |
+| Image Viewer: | [Swayimg](https://github.com/artemsen/swayimg) |
+| Video Player: | [MPV](https://mpv.io/) |
+| Browser: | [Zen](https://zen-browser.app/), [Brave](https://brave.com/), [Chromium](https://www.chromium.org/chromium-projects/) |
+| Editor: | [NVIM](https://github.com/neovim/neovim) |
 
 # HOW to use
 > [!NOTE]

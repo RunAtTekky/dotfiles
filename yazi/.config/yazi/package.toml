@@ -1,7 +1,12 @@
 [[plugin.deps]]
-use = "yazi-rs/plugins:smart-enter"
-rev = "8f1d971"
-hash = "56fdabc96fc1f4d53c96eb884b02a5be"
+use = "yazi-rs/plugins:git"
+rev = "6f50636"
+hash = "270915fa8282a19908449530ff66f7e2"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "6f50636"
+hash = "25aee698dd1081001008ce0cb1cc4da3"
 
 [[plugin.deps]]
 use = "dedukun/relative-motions"
@@ -9,31 +14,16 @@ rev = "a603d9e"
 hash = "e02a788e5b8ae0fb47fd0193dda589cc"
 
 [[plugin.deps]]
-use = "AnirudhG07/plugins-yazi:copy-file-contents"
-rev = "71545f4"
-hash = "f8530ee84fee95dbcc26bb1d8d8019c7"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:piper"
-rev = "8f1d971"
-hash = "64713dcd74daf9ec644883a5895e5d1"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:git"
-rev = "8f1d971"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+use = "yazi-rs/plugins:smart-enter"
+rev = "6f50636"
+hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:no-status"
-rev = "8f1d971"
+rev = "557684b"
 hash = "3e023d31f29201efdac2a6ae35fedb78"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:dracula"
-rev = "f6b425a"
-hash = "c5e49b9e877ca29a3622ec2e35af0b2a"
-
-[[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "a0b1d9d"
-hash = "abfb0b2371259b2c8adfc7b617c3d7e5"
+rev = "ca61658"
+hash = "8589ae0231756a9daf9c072f31b1fe0"
