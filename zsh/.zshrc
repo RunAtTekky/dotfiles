@@ -3,7 +3,7 @@
 autoload -Uz compinit
 compinit -C
 
-[[ -o login ]] && figlet -f slant -c "RunAt"
+[[ -o login ]] && figlet -f slant -c -w $(tput cols) "RunAt" | lolcat
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
@@ -57,12 +57,13 @@ export CPPFLAGS="-I/opt/homebrew/opt/postgresql@18/include"
 export NVM_DIR="$HOME/.nvm"
 
 load-nvm() {
-  unset -f node npm npx
+  unset -f node yarn npm npx
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 }
 
 node() { load-nvm; node "$@"; }
+yarn() { load-nvm; yarn "$@"; }
 npm() { load-nvm; npm "$@"; }
 npx() { load-nvm; npx "$@"; }
 
