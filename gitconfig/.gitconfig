@@ -1,8 +1,10 @@
 [init]
 	defaultBranch = main
 [user]
-	email = varunrawat343@gmail.com
-	name = RunAtTekky
+	; email = varunrawat343@gmail.com
+	; name = RunAtTekky
+	email = varunr@tekion.com
+	name = Varun Rawat
 [alias]
 	s = status
 	c = commit

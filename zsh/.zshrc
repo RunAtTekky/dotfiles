@@ -75,3 +75,26 @@ sdk() {
   source "$SDKMAN_DIR/bin/sdkman-init.sh"
   sdk "$@"
 }
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/varunr/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+export PATH="$HOME/.jenv/bin:$PATH"
+
+jenv() {
+  unset -f jenv
+  eval "$(command jenv init -)"
+  jenv "$@"
+}
+
+export config_type="mongo"
+export CLUSTER_TYPE="local"
+export global_mongo_db="tekionGlobal"
+export global_mongo_hostportcsv="localhost:27017"
+export config_encryption="tekion@123"
+
+export PATH="~/mongodb-macos-x86_64-enterprise-4.2.3/bin:$PATH"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
